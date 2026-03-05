@@ -427,7 +427,8 @@ section { padding:100px 80px; }
 
 /* ─── PROJECTS ─── */
 #projects { background:var(--bg2); }
-.proj-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.proj-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:start; }
+.proj-grid .proj-card:last-child:nth-child(3n+1) { grid-column: span 1; max-width: 100%; }
 .proj-card {
     border-radius:14px; overflow:hidden;
     border:1px solid var(--border); background:var(--surface);
