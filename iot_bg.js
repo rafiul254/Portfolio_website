@@ -1,9 +1,3 @@
-/* ============================================================
-   iot_bg.js  —  IoT 3D Background
-   Sections: #hero, #about, #contact
-   Three.js r128 (loaded via CDN in index.html)
-   ============================================================ */
-
 (function () {
 
     /* ── helpers ── */
@@ -19,7 +13,7 @@
         orange:  0xf97316,
     };
 
-    /* ── shared materials (created once, reused per scene) ── */
+    /* ── shared materials ── */
     function makeMaterials() {
         return {
             board:   new THREE.MeshStandardMaterial({ color:0x1a472a, metalness:.3, roughness:.7, emissive:0x0a2a14, emissiveIntensity:.35 }),
@@ -63,7 +57,7 @@
         /* renderer */
         const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        renderer.setClearColor(0x000000, 0);   // transparent — section bg shows through
+        renderer.setClearColor(0x000000, 0);  
 
         const scene  = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 120);
@@ -204,9 +198,8 @@
         function tick() {
             localT += .012;
 
-            // depth fade helper — objects far back = full opacity, near -6 = fades out
+         
             function depthFade(pz) {
-                // pz range: -18 to -6. Near -6 = fade. Near -14 = full
                 return Math.min(1, Math.max(0, (-pz - 6) / 8));
             }
 
@@ -217,7 +210,7 @@
                 wrap(u,18,11,14);
                 b.position.set(u.px,u.py,u.pz);
                 b.rotation.set(u.rx,u.ry,u.rz);
-                // fade board when it drifts close
+            
                 const fade = depthFade(u.pz);
                 b.traverse(child => { if(child.material) child.material.opacity = fade; child.material && (child.material.transparent = true); });
             });
