@@ -7,18 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="iot_bg.js"></script>
-<script src="main.js"></script>
 <body>
 
-<!-- ★ STARFIELD (fixed background) -->
 <canvas id="bg-stars"></canvas>
-
-<!-- ★ CUSTOM CURSOR -->
 <div id="cursor"></div>
 
-<!-- ★ VIDEO MODAL -->
 <div id="vid-modal" class="modal-bg">
     <div class="modal-box">
         <button id="vid-close" class="modal-close"><i class="fas fa-times"></i></button>
@@ -27,15 +20,11 @@
     </div>
 </div>
 
-<!-- ★ CERT LIGHTBOX -->
 <div id="lightbox" class="lightbox-bg">
     <img id="lb-img" class="lb-img" src="" alt="Certificate"/>
     <span class="lb-hint">CLICK ANYWHERE TO CLOSE  ·  ESC</span>
 </div>
 
-<!-- ════════════════════════════════════
-     NAVBAR
-════════════════════════════════════ -->
 <nav id="navbar">
     <div class="nav-logo">Rafiul<span>.</span></div>
     <ul class="nav-links">
@@ -51,7 +40,6 @@
     <button id="ham"><i class="fas fa-bars"></i></button>
 </nav>
 
-<!-- MOBILE NAV -->
 <div id="mobile-nav">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
@@ -63,116 +51,58 @@
     <a href="#contact">Contact</a>
 </div>
 
-<!-- ════════════════════════════════════
-     HERO
-════════════════════════════════════ -->
+<!-- HERO -->
 <section id="hero">
-
-        <!-- LEFT: Text -->
+    <div class="hero-grid" style="position:relative;z-index:1;">
         <div>
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Available for Opportunities
-            </div>
-
-            <h1 class="hero-h1">
-                Hi, I'm<br/>
-                <span class="name">Md. Rafiul Islam</span>
-            </h1>
-
-            <div class="hero-role">
-                <span id="typing"></span><span class="cursor-blink">|</span>
-            </div>
-
-            <p class="hero-p">
-                IoT &amp; Robotics Engineering undergraduate building intelligent systems
-                where hardware meets advanced AI/ML. From embedded firmware to autonomous
-                robots — turning ideas into real-world impact.
-            </p>
-
+            <div class="hero-badge"><span class="hero-badge-dot"></span>Available for Opportunities</div>
+            <h1 class="hero-h1">Hi, I'm<br/><span class="name">Md. Rafiul Islam</span></h1>
+            <div class="hero-role"><span id="typing"></span><span class="cursor-blink">|</span></div>
+            <p class="hero-p">IoT &amp; Robotics Engineering undergraduate building intelligent systems where hardware meets advanced AI/ML. From embedded firmware to autonomous robots — turning ideas into real-world impact.</p>
             <div class="hero-meta">
                 <span><i class="fas fa-map-marker-alt"></i> Gazipur, Dhaka</span>
                 <span><i class="fas fa-envelope"></i> rafuulislam2004@gmail.com</span>
                 <span><i class="fas fa-phone"></i> 01749534924</span>
             </div>
-
             <div class="hero-btns">
-                <!-- ✏️ Hire Me button → contact section এ নিয়ে যায় -->
-                <a href="#contact" class="btn-primary">
-                    <i class="fas fa-paper-plane"></i> Hire Me
-                </a>
-                <!-- ✏️ Resume → assets/resume.pdf এ তোমার CV রাখো -->
-                <a href="assets/resume.pdf" target="_blank" class="btn-outline">
-                    <i class="fas fa-download"></i> Resume
-                </a>
+                <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                <a href="assets/resume.pdf" target="_blank" class="btn-outline"><i class="fas fa-download"></i> Resume</a>
             </div>
         </div>
-
-        <!-- RIGHT: Photo + Socials -->
         <div class="hero-photo-col">
             <div class="photo-ring-wrap float-anim">
                 <div class="photo-glow"></div>
                 <div class="photo-border">
                     <div class="photo-border-inner">
-                        <!-- ✏️ Save your photo as assets/profile.jpg -->
                         <img src="assets/Profile.jpg" alt="Md. Rafiul Islam"/>
                     </div>
                 </div>
             </div>
-
             <div class="hero-socials">
-                <a href="https://www.linkedin.com/in/rafiul-islam-25sep92004" target="_blank" class="soc-btn" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/rafiul254" target="_blank" class="soc-btn" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/rafi_ul2004?igsh=Nm01ODJkcXBicHM1" target="_blank" class="soc-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/share/14W4QXFVjF4/" target="_blank" class="soc-btn" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=8801749534924" target="_blank" class="soc-btn" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://medium.com/@rafiulislam25" target="_blank" class="soc-btn" title="Medium">
-                    <i class="fab fa-medium-m"></i>
-                </a>
-                <a href="mailto:rafuulislam2004@gmail.com" class="soc-btn" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                <a href="https://www.linkedin.com/in/rafiul-islam-25sep92004" target="_blank" class="soc-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/rafiul254" target="_blank" class="soc-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/rafi_ul2004?igsh=Nm01ODJkcXBicHM1" target="_blank" class="soc-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/14W4QXFVjF4/" target="_blank" class="soc-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=8801749534924" target="_blank" class="soc-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://medium.com/@rafiulislam25" target="_blank" class="soc-btn" title="Medium"><i class="fab fa-medium-m"></i></a>
+                <a href="mailto:rafuulislam2004@gmail.com" class="soc-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://youtube.com/@explore-with-rafiul?si=z5p2MMeGwLBE7UZ4" target="_blank" class="soc-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     ABOUT
-════════════════════════════════════ -->
+<!-- ABOUT -->
 <section id="about">
     <div class="container">
         <span class="s-tag">Get to know me</span>
         <h2 class="s-title">About Me</h2>
         <div class="s-line"></div>
-
         <div class="about-grid">
             <div class="reveal">
-                <p class="about-p">
-                    I am <strong>Md. Rafiul Islam</strong>, an IoT and Robotics Engineering
-                    undergraduate at the University of Frontier Technology, Bangladesh.
-                    I have hands-on experience in robotics, embedded systems, software
-                    development, Tech blogger and AI-driven automation.
-                </p>
-                <p class="about-p">
-                    My work focuses on building intelligent systems that connect hardware,
-                    software, and data to solve practical problems. I've designed autonomous
-                    robots, built AI agents, and created interactive 3D visualizations.
-                </p>
-                <p class="about-p">
-                    Passionate about the intersection of robotics, AI, and real-world
-                    engineering — where intelligent innovation meets tangible impact.
-                </p>
+                <p class="about-p">I am <strong>Md. Rafiul Islam</strong>, an IoT and Robotics Engineering undergraduate at the University of Frontier Technology, Bangladesh. I have hands-on experience in robotics, embedded systems, software development, Tech blogger and AI-driven automation.</p>
+                <p class="about-p">My work focuses on building intelligent systems that connect hardware, software, and data to solve practical problems. I've designed autonomous robots, built AI agents, and created interactive 3D visualizations.</p>
+                <p class="about-p">Passionate about the intersection of robotics, AI, and real-world engineering — where intelligent innovation meets tangible impact.</p>
                 <div class="stats">
                     <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Projects</div></div>
                     <div class="stat"><div class="stat-n">40+</div><div class="stat-l">Certificates</div></div>
@@ -180,7 +110,6 @@
                     <div class="stat"><div class="stat-n">∞</div><div class="stat-l">Curiosity</div></div>
                 </div>
             </div>
-
             <div class="about-cards reveal">
                 <div class="about-card">
                     <div class="about-card-head">⚡ Robotics &amp; Embedded</div>
@@ -199,110 +128,47 @@
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     SKILLS
-════════════════════════════════════ -->
+<!-- SKILLS -->
 <section id="skills">
     <div class="container">
         <span class="s-tag">Technical Arsenal</span>
         <h2 class="s-title">Skills</h2>
         <div class="s-line"></div>
-
         <div class="skills-grid">
-            <div class="skill-card reveal">
-                <div class="skill-icon">⚡</div>
-                <div class="skill-cat">Programming</div>
-                <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">C#</span></div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🤖</div>
-                <div class="skill-cat">Robotics &amp; IoT</div>
-                <div class="tags"><span class="tag">Arduino</span><span class="tag">Robotics</span><span class="tag">Embedded</span><span class="tag">Sensors</span><span class="tag">Actuators</span><span class="tag">MCU</span></div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🧠</div>
-                <div class="skill-cat">AI &amp; Automation</div>
-                <div class="tags"><span class="tag">Machine Learning</span><span class="tag">AI Agents</span><span class="tag">n8n</span><span class="tag">Make.com</span></div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🌐</div>
-                <div class="skill-cat">Web &amp; 3D</div>
-                <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Three.js</span></div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🔗</div>
-                <div class="skill-cat">Core CS</div>
-                <div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Graph Theory</span><span class="tag">OOP</span></div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">🛠️</div>
-                <div class="skill-cat">Tools</div>
-                <div class="tags"><span class="tag">Git/GitHub</span><span class="tag">Cisco pocket tracer</span><span class="tag">AutoCAD</span><span class="tag">MySQL</span><span class="tag">API Integration</span><span class="tag">PCB Design</span></div>
-            </div>
+            <div class="skill-card reveal"><div class="skill-icon">⚡</div><div class="skill-cat">Programming</div><div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">C#</span></div></div>
+            <div class="skill-card reveal"><div class="skill-icon">🤖</div><div class="skill-cat">Robotics &amp; IoT</div><div class="tags"><span class="tag">Arduino</span><span class="tag">Robotics</span><span class="tag">Embedded</span><span class="tag">Sensors</span><span class="tag">Actuators</span><span class="tag">MCU</span></div></div>
+            <div class="skill-card reveal"><div class="skill-icon">🧠</div><div class="skill-cat">AI &amp; Automation</div><div class="tags"><span class="tag">Machine Learning</span><span class="tag">AI Agents</span><span class="tag">n8n</span><span class="tag">Make.com</span></div></div>
+            <div class="skill-card reveal"><div class="skill-icon">🌐</div><div class="skill-cat">Web &amp; 3D</div><div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Three.js</span></div></div>
+            <div class="skill-card reveal"><div class="skill-icon">🔗</div><div class="skill-cat">Core CS</div><div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Graph Theory</span><span class="tag">OOP</span></div></div>
+            <div class="skill-card reveal"><div class="skill-icon">🛠️</div><div class="skill-cat">Tools</div><div class="tags"><span class="tag">Git/GitHub</span><span class="tag">Cisco pocket tracer</span><span class="tag">AutoCAD</span><span class="tag">MySQL</span><span class="tag">API Integration</span><span class="tag">PCB Design</span></div></div>
         </div>
-
-        <!-- Professional Skill Bars -->
         <div class="reveal" style="max-width:920px;margin:0 auto;">
             <span class="s-tag">What I bring</span>
-            <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;
-                 margin-bottom:8px;background:linear-gradient(135deg,#fff,#c4b5fd);
-                 -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-                Professional Skills
-            </h3>
+            <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:8px;background:linear-gradient(135deg,#fff,#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Professional Skills</h3>
             <div class="s-line"></div>
             <div class="bar-grid">
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">Problem Solving</span><span class="bar-pct">80%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">IoT &amp; Embedded Systems</span><span class="bar-pct">75%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">AI &amp; Automation</span><span class="bar-pct">80%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">Python Programming</span><span class="bar-pct">70%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">C / C++</span><span class="bar-pct">80%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">Leadership</span><span class="bar-pct">88%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="88"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">Web Development</span><span class="bar-pct">75%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
-                </div>
-                <div class="bar-wrap">
-                    <div class="bar-head"><span class="bar-name">Communication</span><span class="bar-pct">90%</span></div>
-                    <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
-                </div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">Problem Solving</span><span class="bar-pct">80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">IoT &amp; Embedded Systems</span><span class="bar-pct">75%</span></div><div class="bar-track"><div class="bar-fill" data-w="75"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">AI &amp; Automation</span><span class="bar-pct">80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">Python Programming</span><span class="bar-pct">70%</span></div><div class="bar-track"><div class="bar-fill" data-w="70"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">C / C++</span><span class="bar-pct">80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">Leadership</span><span class="bar-pct">88%</span></div><div class="bar-track"><div class="bar-fill" data-w="88"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">Web Development</span><span class="bar-pct">75%</span></div><div class="bar-track"><div class="bar-fill" data-w="75"></div></div></div>
+                <div class="bar-wrap"><div class="bar-head"><span class="bar-name">Communication</span><span class="bar-pct">90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     EDUCATION
-════════════════════════════════════ -->
+<!-- EDUCATION -->
 <section id="education">
     <div class="container">
         <span class="s-tag">Academic Journey</span>
         <h2 class="s-title">Education</h2>
         <div class="s-line"></div>
-
         <div class="edu-list">
             <div class="edu-item reveal">
-                <div class="edu-dot-col">
-                    <div class="edu-dot fill"></div>
-                    <div class="edu-vline"></div>
-                </div>
+                <div class="edu-dot-col"><div class="edu-dot fill"></div><div class="edu-vline"></div></div>
                 <div class="edu-body">
                     <div class="edu-date">NOV 2024 — Feb 2029</div>
                     <div class="edu-school">University of Frontier Technology, Bangladesh</div>
@@ -310,12 +176,8 @@
                     <span class="edu-badge">Currently Enrolled</span>
                 </div>
             </div>
-
             <div class="edu-item reveal">
-                <div class="edu-dot-col">
-                    <div class="edu-dot"></div>
-                    <div class="edu-vline"></div>
-                </div>
+                <div class="edu-dot-col"><div class="edu-dot"></div><div class="edu-vline"></div></div>
                 <div class="edu-body">
                     <div class="edu-date">MAR 2022 — AUG 2023</div>
                     <div class="edu-school">Chuadanga Government College</div>
@@ -323,11 +185,8 @@
                     <span class="edu-badge">GPA: 4.75</span>
                 </div>
             </div>
-
             <div class="edu-item reveal">
-                <div class="edu-dot-col">
-                    <div class="edu-dot"></div>
-                </div>
+                <div class="edu-dot-col"><div class="edu-dot"></div></div>
                 <div class="edu-body">
                     <div class="edu-date">FEB 2016 — OCT 2021</div>
                     <div class="edu-school">Alamdanga Government High School</div>
@@ -339,241 +198,120 @@
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     EXPERIENCE  (resume থেকে updated)
-════════════════════════════════════ -->
+<!-- EXPERIENCE -->
 <section id="experience">
     <div class="container">
         <span class="s-lbl">Work &amp; Leadership</span>
         <h2 class="s-title">Experience</h2>
         <div class="s-line"></div>
         <div class="exp-grid">
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Internship · Virtual</span>
-                <div class="exp-role">Intern — Ignite Internship Program</div>
-                <div class="exp-org">Bangladesh Youth Skills Development Organisation (BYSDO)</div>
-                <div class="exp-date">Mar 2026 – May 2026</div>
-                <div class="exp-desc">Selected for 3-month intensive internship program to enhance skills and contribute to youth development projects.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Full-time · Remote</span>
-                <div class="exp-role">Content Executive</div>
-                <div class="exp-org">Daricomma</div>
-                <div class="exp-date">Jan 2026 – Present</div>
-                <div class="exp-desc">Creating and managing content for online educational platforms, driving engagement and knowledge sharing.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Full-time · On-site</span>
-                <div class="exp-role">Photographer</div>
-                <div class="exp-org">UFTB Robotics Club</div>
-                <div class="exp-date">Sep 2025 – Present</div>
-                <div class="exp-desc">Documenting robotics events and workshops. Captured third place in IoT &amp; Robotics Contest.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Full-time</span>
-                <div class="exp-role">Social Media Manager</div>
-                <div class="exp-org">UFTB AI Community</div>
-                <div class="exp-date">Dec 2025 – Present</div>
-                <div class="exp-desc">Managing digital presence and content strategy, building engagement around AI/ML topics.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Seasonal · Remote</span>
-                <div class="exp-role">Campus Ambassador</div>
-                <div class="exp-org">Requin BD</div>
-                <div class="exp-date">Jan 2026 – Present</div>
-                <div class="exp-desc">Representing Requin BD on campus, fostering tech innovation and connecting students with opportunities.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Seasonal · Remote</span>
-                <div class="exp-role">Campus Ambassador</div>
-                <div class="exp-org">Robo Tech Valley</div>
-                <div class="exp-date">Oct 2025 – Present</div>
-                <div class="exp-desc">Bridging students with robotics resources, events, and professional opportunities.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Seasonal · Remote</span>
-                <div class="exp-role">Event Ambassador</div>
-                <div class="exp-org">Data Solution-360</div>
-                <div class="exp-date">Oct 2025 – Present</div>
-                <div class="exp-desc">Promoting BattleOfInsights competitions — Python, AI Agents, SQL, Statistical Analysis.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Cohort 5 · Remote</span>
-                <div class="exp-role">Aspire Leaders Program</div>
-                <div class="exp-org">Aspire Institute</div>
-                <div class="exp-date">Sep 2025 – Dec 2025</div>
-                <div class="exp-desc">Completed Harvard co-created leadership development program focused on leadership skills and global impact.</div>
-            </div>
-
-            <div class="exp-card glass reveal">
-                <span class="exp-badge">Seasonal · Remote</span>
-                <div class="exp-role">ILC University Representative</div>
-                <div class="exp-org">International Leadership Competition</div>
-                <div class="exp-date">Jul 2025 – Jan 2026</div>
-                <div class="exp-desc">Represented university at Bangladesh's first international-level leadership competition.</div>
-            </div>
-
+            <div class="exp-card glass reveal"><span class="exp-badge">Internship · Virtual</span><div class="exp-role">Intern — Ignite Internship Program</div><div class="exp-org">Bangladesh Youth Skills Development Organisation (BYSDO)</div><div class="exp-date">Mar 2026 – May 2026</div><div class="exp-desc">Selected for 3-month intensive internship program to enhance skills and contribute to youth development projects.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Full-time · Remote</span><div class="exp-role">Content Executive</div><div class="exp-org">Daricomma</div><div class="exp-date">Jan 2025 </div><div class="exp-desc">Creating and managing content for online educational platforms, driving engagement and knowledge sharing.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Full-time · On-site</span><div class="exp-role">Photographer</div><div class="exp-org">UFTB Robotics Club</div><div class="exp-date">Sep 2025 – Present</div><div class="exp-desc">Documenting robotics events and workshops. Captured third place in IoT &amp; Robotics Contest.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Full-time</span><div class="exp-role">Social Media Manager</div><div class="exp-org">UFTB AI Community</div><div class="exp-date">Dec 2025 – Present</div><div class="exp-desc">Managing digital presence and content strategy, building engagement around AI/ML topics.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Seasonal · Remote</span><div class="exp-role">Campus Ambassador</div><div class="exp-org">Requin BD</div><div class="exp-date">Jan 2026 – Present</div><div class="exp-desc">Representing Requin BD on campus, fostering tech innovation and connecting students with opportunities.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Seasonal · Remote</span><div class="exp-role">Campus Ambassador</div><div class="exp-org">Robo Tech Valley</div><div class="exp-date">Oct 2025 – Present</div><div class="exp-desc">Bridging students with robotics resources, events, and professional opportunities.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Seasonal · Remote</span><div class="exp-role">Event Ambassador</div><div class="exp-org">Data Solution-360</div><div class="exp-date">Oct 2025 – Present</div><div class="exp-desc">Promoting BattleOfInsights competitions — Python, AI Agents, SQL, Statistical Analysis.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Cohort 5 · Remote</span><div class="exp-role">Aspire Leaders Program</div><div class="exp-org">Aspire Institute</div><div class="exp-date">Sep 2025 – Dec 2025</div><div class="exp-desc">Completed Harvard co-created leadership development program focused on leadership skills and global impact.</div></div>
+            <div class="exp-card glass reveal"><span class="exp-badge">Seasonal · Remote</span><div class="exp-role">ILC University Representative</div><div class="exp-org">International Leadership Competition</div><div class="exp-date">Jul 2025 – Jan 2026</div><div class="exp-desc">Represented university at Bangladesh's first international-level leadership competition.</div></div>
         </div>
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
     <div class="container">
         <span class="s-tag">Featured Work</span>
         <h2 class="s-title">Projects</h2>
         <div class="s-line"></div>
-
         <div class="proj-grid">
 
-            <!-- PROJECT 1: System Argus AI -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-system argus Ai.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-system argus Ai.jpeg"/></div>
                 <div class="proj-body">
                     <div class="proj-name">System Argus AI</div>
                     <div class="proj-desc">AI-powered monitoring &amp; surveillance using computer vision and ML for real-time detection with automated response workflows.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Python</span>
-                        <span class="proj-tag">AI/ML</span>
-                        <span class="proj-tag">Automation</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">AI/ML</span><span class="proj-tag">Automation</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/system-Argus-AI" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <button onclick="openVideo('https://youtu.be/KJxn4bfKvMA', 'System Argus AI')" class="plink plink-live">
-                            <i class="fas fa-play"></i> Demo
-                        </button>
+                        <a href="https://github.com/rafiul254/system-Argus-AI" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <button onclick="openVideo('https://youtu.be/KJxn4bfKvMA', 'System Argus AI')" class="plink plink-live"><i class="fas fa-play"></i> Demo</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PROJECT 2: Habit Tracker -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-habit tracker.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-habit tracker.jpeg"/></div>
                 <div class="proj-body">
                     <div class="proj-name">Habit Tracker App</div>
                     <div class="proj-desc">Desktop application for daily habit tracking with intuitive UI, data persistence, and visual progress analytics.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Python</span>
-                        <span class="proj-tag">Desktop App</span>
-                        <span class="proj-tag">UI/UX</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Desktop App</span><span class="proj-tag">UI/UX</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/HabitTracker" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <button onclick="openVideo('https://youtu.be/rW5A-1VyZus', 'Habit Tracker App')" class="plink plink-live">
-                            <i class="fas fa-play"></i> Demo
-                        </button>
+                        <a href="https://github.com/rafiul254/HabitTracker" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <button onclick="openVideo('https://youtu.be/rW5A-1VyZus', 'Habit Tracker App')" class="plink plink-live"><i class="fas fa-play"></i> Demo</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PROJECT 3: Weather Agent (no video) -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-weather agent.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-weather agent.jpeg"/></div>
                 <div class="proj-body">
                     <div class="proj-name">Weather Agent Automation</div>
                     <div class="proj-desc">n8n workflow automation integrating weather APIs, processing real-time data and delivering automated outputs via AI agents.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">n8n</span>
-                        <span class="proj-tag">API</span>
-                        <span class="proj-tag">AI Agent</span>
-                        <span class="proj-tag">Automation</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">n8n</span><span class="proj-tag">API</span><span class="proj-tag">AI Agent</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/n8n-weather-agent" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
+                        <a href="https://github.com/rafiul254/n8n-weather-agent" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- PROJECT 4: Bus Route Finder -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-local bus route finder.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-local bus route finder.jpeg"/></div>
                 <div class="proj-body">
                     <div class="proj-name">Local Bus Route Finder</div>
                     <div class="proj-desc">Graph-based bus route finding system using BFS and DFS algorithms to compute optimal transport paths.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Python</span>
-                        <span class="proj-tag">BFS/DFS</span>
-                        <span class="proj-tag">Graph Theory</span>
-                        <span class="proj-tag">Algorithms</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">BFS/DFS</span><span class="proj-tag">Algorithms</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/DSA-Local-Bus-Route-Finder-System" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <button onclick="openVideo('https://youtu.be/BpWQAnGfRdw', 'Local Bus Route Finder')" class="plink plink-live">
-                            <i class="fas fa-play"></i> Demo
-                        </button>
+                        <a href="https://github.com/rafiul254/DSA-Local-Bus-Route-Finder-System" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <button onclick="openVideo('https://youtu.be/BpWQAnGfRdw', 'Local Bus Route Finder')" class="plink plink-live"><i class="fas fa-play"></i> Demo</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PROJECT 5: OopsStopper Robot -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-DIY robot.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-DIY robot.jpeg"/></div>
                 <div class="proj-body">
-                    <div class="proj-name">DLY Edge Detection Robot</div>
+                    <div class="proj-name">DIY Edge Detection Robot</div>
                     <div class="proj-desc">Arduino-based autonomous robot using edge detection sensors to navigate and prevent falling off surfaces with real-time feedback.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Arduino</span>
-                        <span class="proj-tag">C++</span>
-                        <span class="proj-tag">Edge Detection</span>
-                        <span class="proj-tag">Sensors</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">Arduino</span><span class="proj-tag">C++</span><span class="proj-tag">Sensors</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/OopsStopper-v1.0" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <button onclick="openVideo('https://youtube.com/shorts/E52RMUhqKQ4', 'OopsStopper v1.0 Demo')" class="plink plink-live">
-                            <i class="fas fa-play"></i> Demo
-                        </button>
+                        <a href="https://github.com/rafiul254/OopsStopper-v1.0" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <button onclick="openVideo('https://youtube.com/shorts/E52RMUhqKQ4', 'OopsStopper v1.0 Demo')" class="plink plink-live"><i class="fas fa-play"></i> Demo</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PROJECT 6: QNN Visualization -->
             <div class="proj-card reveal">
-                <div class="proj-thumb">
-                    <img src="assets/thumb-quantum neural network.jpeg"/>
-                </div>
+                <div class="proj-thumb"><img src="assets/thumb-quantum neural network.jpeg"/></div>
                 <div class="proj-body">
                     <div class="proj-name">Quantum Neural Network Viz</div>
                     <div class="proj-desc">Interactive 3D visualization of Quantum Neural Networks using Three.js, representing complex quantum computational models.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Three.js</span>
-                        <span class="proj-tag">JavaScript</span>
-                        <span class="proj-tag">AI/QNN</span>
-                        <span class="proj-tag">3D Viz</span>
-                    </div>
+                    <div class="proj-tags"><span class="proj-tag">Three.js</span><span class="proj-tag">JavaScript</span><span class="proj-tag">3D Viz</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/rafiul254/Quantum-neural-network" target="_blank" class="plink">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <button onclick="openVideo('https://youtu.be/qKSivP8LXH8', '3D Quantum Neural Network')" class="plink plink-live">
-                            <i class="fas fa-play"></i> Demo
-                        </button>
+                        <a href="https://github.com/rafiul254/Quantum-neural-network" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <button onclick="openVideo('https://youtu.be/qKSivP8LXH8', '3D Quantum Neural Network')" class="plink plink-live"><i class="fas fa-play"></i> Demo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-thumb"><img src="assets/thumb-portfolio.jpeg" onerror="this.parentElement.style.background='linear-gradient(135deg,#1e0a3c,#0a1628)';this.style.display='none'"/></div>
+                <div class="proj-body">
+                    <div class="proj-name">Personal Portfolio Website</div>
+                    <div class="proj-desc">Personal portfolio with Three.js IoT 3D background, aurora animations, project showcases and certifications.</div>
+                    <div class="proj-tags"><span class="proj-tag">HTML/CSS/JS</span><span class="proj-tag">Three.js</span><span class="proj-tag">IoT Theme</span></div>
+                    <div class="proj-links">
+                        <a href="https://github.com/rafiul254/Portfolio_website" target="_blank" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://portfolio-website-rafiul.vercel.app" target="_blank" class="plink plink-live"><i class="fas fa-external-link-alt"></i> Live</a>
                     </div>
                 </div>
             </div>
@@ -582,357 +320,72 @@
     </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section id="certifications" style="background:var(--bg2);">
     <div class="container">
         <span class="s-tag">Credentials</span>
         <h2 class="s-title">Certifications &amp; Achievements</h2>
         <div class="s-line"></div>
-
         <div class="cert-grid">
-
-            <!-- CERT 1: GP Academy — AI & ML -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert- Ai and machine learning.jpeg')">
-                    <img src="assets/cert- Ai and machine learning.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🧠</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/grameenphone.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📱'"/>
-                        </div>
-                        <div><div class="cert-issuer">GP Academy</div><div class="cert-date">Sep 2025</div></div>
-                    </div>
-                    <div class="cert-name">AI &amp; Machine Learning</div>
-                    <div class="cert-desc-t">Certificate of Excellence</div>
-                </div>
-            </div>
-
-            <!-- CERT 2: Ostad — AI Automation -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-Ai automation.jpeg')">
-                    <img src="assets/cert-Ai automation.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🤖</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/ostad.app"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🤖'"/>
-                        </div>
-                        <div><div class="cert-issuer">Ostad</div><div class="cert-date">Jan 2026</div></div>
-                    </div>
-                    <div class="cert-name">AI Automation: Build Your First AI Agent</div>
-                    <div class="cert-desc-t">Automation, AI Agents development</div>
-                </div>
-            </div>
-
-            <!-- CERT 3: Udemy — AI Voice Agents -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-Ai voice agent.jpeg')">
-                    <img src="assets/cert-Ai voice agent.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🎙️</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/udemy.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🎙️'"/>
-                        </div>
-                        <div><div class="cert-issuer">Udemy</div><div class="cert-date">Dec 2025</div></div>
-                    </div>
-                    <div class="cert-name">Master AI Voice Agents</div>
-                    <div class="cert-desc-t">Automate Calls with AI and No-Code</div>
-                </div>
-            </div>
-
-            <!-- CERT 4: Aspire Institute -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-aspire leadership.jpeg')">
-                    <img src="assets/cert-aspire leadership.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🏆</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-fb">🏆</div>
-                        <div><div class="cert-issuer">Aspire Institute</div><div class="cert-date">Dec 2025</div></div>
-                    </div>
-                    <div class="cert-name">Aspire Leaders Program</div>
-                    <div class="cert-desc-t">Leadership Development · Harvard co-created</div>
-                </div>
-            </div>
-
-            <!-- CERT 5: Cisco — Data Science -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-cisco data science.jpeg')">
-                    <img src="assets/cert-cisco data science.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📊</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/cisco.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📊'"/>
-                        </div>
-                        <div><div class="cert-issuer">Cisco Networking Academy</div><div class="cert-date">Oct 2025</div></div>
-                    </div>
-                    <div class="cert-name">Introduction to Data Science</div>
-                    <div class="cert-desc-t">Data Analytics, AI &amp; ML</div>
-                </div>
-            </div>
-
-            <!-- CERT 6: Cisco — IoT -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-cisco iot.jpeg')">
-                    <img src="assets/cert-cisco iot.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📡</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/cisco.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📡'"/>
-                        </div>
-                        <div><div class="cert-issuer">Cisco Networking Academy</div><div class="cert-date">Oct 2025</div></div>
-                    </div>
-                    <div class="cert-name">Introduction to Internet of Things</div>
-                    <div class="cert-desc-t">IoT fundamentals, embedded devices</div>
-                </div>
-            </div>
-
-            <!-- CERT 7: Red Team Leaders — CCEP -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-cybersecurity educator professional.jpeg')">
-                    <img src="assets/cert-cybersecurity educator professional.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🔐</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-fb">🔐</div>
-                        <div><div class="cert-issuer">Red Team Leaders</div><div class="cert-date">Nov 2025</div></div>
-                    </div>
-                    <div class="cert-name">Certified Cybersecurity Educator (CCEP)</div>
-                    <div class="cert-desc-t">Professional Cybersecurity Certification</div>
-                </div>
-            </div>
-
-            <!-- CERT 8: Simplilearn — Google Cloud AI -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-google cloud Ai.jpeg')">
-                    <img src="assets/cert-google cloud Ai.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>☁️</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/simplilearn.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='☁️'"/>
-                        </div>
-                        <div><div class="cert-issuer">Simplilearn</div><div class="cert-date">Jan 2026</div></div>
-                    </div>
-                    <div class="cert-name">Innovating with Google Cloud AI</div>
-                    <div class="cert-desc-t">Generative AI, Google Cloud fundamentals</div>
-                </div>
-            </div>
-
-            <!-- CERT 9: IEEE RAS IUT — PCB Design -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-IEEE pcb design.jpeg')">
-                    <img src="assets/cert-IEEE pcb design.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>⚡</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/ieee.org"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='⚡'"/>
-                        </div>
-                        <div><div class="cert-issuer">IEEE RAS IUT</div><div class="cert-date">Oct 2025</div></div>
-                    </div>
-                    <div class="cert-name">PCB Designing Workshop</div>
-                    <div class="cert-desc-t">Printed Circuit Board Design</div>
-                </div>
-            </div>
-
-            <!-- CERT 10: UFTB — IoT Contest 3rd Place -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-iot contest.jpeg')">
-                    <img src="assets/cert-iot contest.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🥉</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-fb">🥉</div>
-                        <div><div class="cert-issuer">UFTB Robotics Club</div><div class="cert-date">Nov 2025</div></div>
-                    </div>
-                    <div class="cert-name">IoT &amp; Robotics Contest 2025</div>
-                    <div class="cert-desc-t">Third Place — Junior Category</div>
-                </div>
-            </div>
-
-            <!-- CERT 11: ILC — Elevation Round -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-leadership competition elevation round.jpeg')">
-                    <img src="assets/cert-leadership competition elevation round.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🎖️</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-fb">🎖️</div>
-                        <div><div class="cert-issuer">Youth Skill Development Institute</div><div class="cert-date">2025</div></div>
-                    </div>
-                    <div class="cert-name">ILC 1.0 — Elevation Round</div>
-                    <div class="cert-desc-t">International Leadership Competition</div>
-                </div>
-            </div>
-
-            <!-- CERT 12: IBM — Python 101 -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-python for data science.jpeg')">
-                    <img src="assets/cert-python for data science.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🐍</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/ibm.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🐍'"/>
-                        </div>
-                        <div><div class="cert-issuer">IBM</div><div class="cert-date">Jan 2026</div></div>
-                    </div>
-                    <div class="cert-name">Python 101 for Data Science</div>
-                    <div class="cert-desc-t">Python, NumPy, Data Science fundamentals</div>
-                </div>
-            </div>
-
-            <!-- CERT 13: ScienceBaze — Olympiad -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-science olympiad.jpeg')">
-                    <img src="assets/cert-science olympiad.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🔬</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-fb">🔬</div>
-                        <div><div class="cert-issuer">ScienceBaze</div><div class="cert-date">Dec 2025</div></div>
-                    </div>
-                    <div class="cert-name">2nd International General Science Olympiad</div>
-                    <div class="cert-desc-t">Olympiad, Critical Thinking</div>
-                </div>
-            </div>
-
-            <!-- CERT 14: Wiley — Research -->
-            <div class="cert-card reveal">
-                <div class="cert-img-wrap" onclick="openLightbox('assets/cert-wiley research.jpeg')">
-                    <img src="assets/cert-wiley research.jpeg"
-                         onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📚</span>'"/>
-                    <div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div>
-                </div>
-                <div class="cert-body">
-                    <div class="cert-logo-row">
-                        <div class="cert-logo-box">
-                            <img src="https://logo.clearbit.com/wiley.com"
-                                 onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📚'"/>
-                        </div>
-                        <div><div class="cert-issuer">Wiley Research Group</div><div class="cert-date">Oct 2025</div></div>
-                    </div>
-                    <div class="cert-name">Key Components of a Research Article</div>
-                    <div class="cert-desc-t">Research Design &amp; Academic Writing</div>
-                </div>
-            </div>
-
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert- Ai and machine learning.jpeg')"><img src="assets/cert- Ai and machine learning.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🧠</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/grameenphone.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📱'"/></div><div><div class="cert-issuer">GP Academy</div><div class="cert-date">Sep 2025</div></div></div><div class="cert-name">AI &amp; Machine Learning</div><div class="cert-desc-t">Certificate of Excellence</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-Ai automation.jpeg')"><img src="assets/cert-Ai automation.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🤖</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/ostad.app" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🤖'"/></div><div><div class="cert-issuer">Ostad</div><div class="cert-date">Jan 2026</div></div></div><div class="cert-name">AI Automation: Build Your First AI Agent</div><div class="cert-desc-t">Automation, AI Agents development</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-Ai voice agent.jpeg')"><img src="assets/cert-Ai voice agent.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🎙️</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/udemy.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🎙️'"/></div><div><div class="cert-issuer">Udemy</div><div class="cert-date">Dec 2025</div></div></div><div class="cert-name">Master AI Voice Agents</div><div class="cert-desc-t">Automate Calls with AI and No-Code</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-aspire leadership.jpeg')"><img src="assets/cert-aspire leadership.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🏆</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-fb">🏆</div><div><div class="cert-issuer">Aspire Institute</div><div class="cert-date">Dec 2025</div></div></div><div class="cert-name">Aspire Leaders Program</div><div class="cert-desc-t">Leadership Development · Harvard co-created</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-cisco data science.jpeg')"><img src="assets/cert-cisco data science.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📊</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/cisco.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📊'"/></div><div><div class="cert-issuer">Cisco Networking Academy</div><div class="cert-date">Oct 2025</div></div></div><div class="cert-name">Introduction to Data Science</div><div class="cert-desc-t">Data Analytics, AI &amp; ML</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-cisco iot.jpeg')"><img src="assets/cert-cisco iot.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📡</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/cisco.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📡'"/></div><div><div class="cert-issuer">Cisco Networking Academy</div><div class="cert-date">Oct 2025</div></div></div><div class="cert-name">Introduction to Internet of Things</div><div class="cert-desc-t">IoT fundamentals, embedded devices</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-cybersecurity educator professional.jpeg')"><img src="assets/cert-cybersecurity educator professional.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🔐</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-fb">🔐</div><div><div class="cert-issuer">Red Team Leaders</div><div class="cert-date">Nov 2025</div></div></div><div class="cert-name">Certified Cybersecurity Educator (CCEP)</div><div class="cert-desc-t">Professional Cybersecurity Certification</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-google cloud Ai.jpeg')"><img src="assets/cert-google cloud Ai.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>☁️</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/simplilearn.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='☁️'"/></div><div><div class="cert-issuer">Simplilearn</div><div class="cert-date">Jan 2026</div></div></div><div class="cert-name">Innovating with Google Cloud AI</div><div class="cert-desc-t">Generative AI, Google Cloud fundamentals</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-IEEE pcb design.jpeg')"><img src="assets/cert-IEEE pcb design.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>⚡</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/ieee.org" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='⚡'"/></div><div><div class="cert-issuer">IEEE RAS IUT</div><div class="cert-date">Oct 2025</div></div></div><div class="cert-name">PCB Designing Workshop</div><div class="cert-desc-t">Printed Circuit Board Design</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-iot contest.jpeg')"><img src="assets/cert-iot contest.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🥉</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-fb">🥉</div><div><div class="cert-issuer">UFTB Robotics Club</div><div class="cert-date">Nov 2025</div></div></div><div class="cert-name">IoT &amp; Robotics Contest 2025</div><div class="cert-desc-t">Third Place — Junior Category</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-leadership competition elevation round.jpeg')"><img src="assets/cert-leadership competition elevation round.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🎖️</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-fb">🎖️</div><div><div class="cert-issuer">Youth Skill Development Institute</div><div class="cert-date">2025</div></div></div><div class="cert-name">ILC 1.0 — Elevation Round</div><div class="cert-desc-t">International Leadership Competition</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-python for data science.jpeg')"><img src="assets/cert-python for data science.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🐍</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/ibm.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='🐍'"/></div><div><div class="cert-issuer">IBM</div><div class="cert-date">Jan 2026</div></div></div><div class="cert-name">Python 101 for Data Science</div><div class="cert-desc-t">Python, NumPy, Data Science fundamentals</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-science olympiad.jpeg')"><img src="assets/cert-science olympiad.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>🔬</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-fb">🔬</div><div><div class="cert-issuer">ScienceBaze</div><div class="cert-date">Dec 2025</div></div></div><div class="cert-name">2nd International General Science Olympiad</div><div class="cert-desc-t">Olympiad, Critical Thinking</div></div></div>
+            <div class="cert-card reveal"><div class="cert-img-wrap" onclick="openLightbox('assets/cert-wiley research.jpeg')"><img src="assets/cert-wiley research.jpeg" onerror="this.parentNode.className='cert-no-img';this.parentNode.innerHTML='<span style=font-size:2.5rem>📚</span>'"/><div class="cert-img-hover"><i class="fas fa-expand"></i> View Certificate</div></div><div class="cert-body"><div class="cert-logo-row"><div class="cert-logo-box"><img src="https://logo.clearbit.com/wiley.com" onerror="this.parentNode.className='cert-logo-fb';this.parentNode.innerHTML='📚'"/></div><div><div class="cert-issuer">Wiley Research Group</div><div class="cert-date">Oct 2025</div></div></div><div class="cert-name">Key Components of a Research Article</div><div class="cert-desc-t">Research Design &amp; Academic Writing</div></div></div>
         </div>
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     CONTACT
-════════════════════════════════════ -->
+<!-- CONTACT -->
 <section id="contact">
     <div class="container">
         <span class="s-tag">Let's Connect</span>
         <h2 class="s-title">Get In Touch</h2>
         <div class="s-line"></div>
-
         <div class="contact-grid">
             <div class="reveal">
-                <p class="c-p">
-                    Open to collaborations, internships, research, and interesting projects
-                    in IoT, robotics, automation, or software development.
-                    Let's build something remarkable together.
-                </p>
-                <a href="mailto:rafuulislam2004@gmail.com" class="c-item">
-                    <i class="fas fa-envelope"></i>
-                    <span class="c-item-t">rafuulislam2004@gmail.com</span>
-                </a>
-                <a href="tel:+8801749534924" class="c-item">
-                    <i class="fas fa-phone"></i>
-                    <span class="c-item-t">+880 1749534924</span>
-                </a>
-                <div class="c-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span class="c-item-t">Gazipur, Dhaka, Bangladesh</span>
-                </div>
+                <p class="c-p">Open to collaborations, internships, research, and interesting projects in IoT, robotics, automation, or software development. Let's build something remarkable together.</p>
+                <a href="mailto:rafuulislam2004@gmail.com" class="c-item"><i class="fas fa-envelope"></i><span class="c-item-t">rafuulislam2004@gmail.com</span></a>
+                <a href="tel:+8801749534924" class="c-item"><i class="fas fa-phone"></i><span class="c-item-t">+880 1749534924</span></a>
+                <div class="c-item"><i class="fas fa-map-marker-alt"></i><span class="c-item-t">Gazipur, Dhaka, Bangladesh</span></div>
                 <div class="socials-row">
                     <a href="https://www.linkedin.com/in/rafi-ul-islam-b9485233b" target="_blank" class="soc-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/rafiul254"                         target="_blank" class="soc-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/rafi_ul2004"                target="_blank" class="soc-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/14W4QXFVjF4/"           target="_blank" class="soc-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=8801749534924"    target="_blank" class="soc-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://medium.com/@rafiulislam25"                    target="_blank" class="soc-btn" title="Medium"><i class="fab fa-medium-m"></i></a>
-                    <a href="mailto:rafuulislam2004@gmail.com"                      class="soc-btn" title="Email"><i class="fas fa-envelope"></i></a>
-                    <!-- ✏️ YouTube থাকলে uncomment:
-                    <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="soc-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    -->
+                    <a href="https://github.com/rafiul254" target="_blank" class="soc-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/rafi_ul2004" target="_blank" class="soc-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/14W4QXFVjF4/" target="_blank" class="soc-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=8801749534924" target="_blank" class="soc-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://medium.com/@rafiulislam25" target="_blank" class="soc-btn" title="Medium"><i class="fab fa-medium-m"></i></a>
+                    <a href="mailto:rafuulislam2004@gmail.com" class="soc-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://youtube.com/@explore-with-rafiul?si=z5p2MMeGwLBE7UZ4" target="_blank" class="soc-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-
             <form id="cform" class="reveal">
-                <div class="fgroup">
-                    <label class="flabel">Name</label>
-                    <input type="text" class="finput" placeholder="Your Name" required/>
-                </div>
-                <div class="fgroup">
-                    <label class="flabel">Email</label>
-                    <input type="email" class="finput" placeholder="your@email.com" required/>
-                </div>
-                <div class="fgroup">
-                    <label class="flabel">Subject</label>
-                    <input type="text" class="finput" placeholder="Collaboration / Project / Internship"/>
-                </div>
-                <div class="fgroup">
-                    <label class="flabel">Message</label>
-                    <textarea rows="5" class="finput" placeholder="Tell me about your idea..." required style="resize:vertical;"></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="align-self:flex-start;">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
+                <div class="fgroup"><label class="flabel">Name</label><input type="text" class="finput" placeholder="Your Name" required/></div>
+                <div class="fgroup"><label class="flabel">Email</label><input type="email" class="finput" placeholder="your@email.com" required/></div>
+                <div class="fgroup"><label class="flabel">Subject</label><input type="text" class="finput" placeholder="Collaboration / Project / Internship"/></div>
+                <div class="fgroup"><label class="flabel">Message</label><textarea rows="5" class="finput" placeholder="Tell me about your idea..." required style="resize:vertical;"></textarea></div>
+                <button type="submit" class="btn-primary" style="align-self:flex-start;"><i class="fas fa-paper-plane"></i> Send Message</button>
             </form>
         </div>
     </div>
 </section>
 
-<!-- ════════════════════════════════════
-     FOOTER
-════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
     &lt; crafted by <span>Md. Rafiul Islam</span> · IoT &amp; Robotics Engineer /&gt; · © 2026
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="iot_bg.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
