@@ -1,8 +1,3 @@
-/* ============================================================
-   Rafiul Islam Portfolio — main.js
-   ============================================================ */
-
-/* ── CONFIG: তোমার roles ── */
 const ROLES = [
     'IoT & Robotics Engineer',
     'AI Enthusiast',
@@ -127,7 +122,7 @@ function initReveal() {
         entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }),
         { threshold: .1 }
     ).observe;
-    // fallback: per-element observer
+   
     document.querySelectorAll('.reveal').forEach(el =>
         new IntersectionObserver(
             entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }),
@@ -151,9 +146,6 @@ function initSkillBars() {
 
 /* ══════════════════════════════════════════════
    9. VIDEO MODAL
-   ─────────────────────────────────────────────
-   Usage in HTML:
-   onclick="openVideo('https://youtu.be/YOUR_ID','Project Title')"
 ══════════════════════════════════════════════ */
 function initVideoModal() {
     const overlay = document.getElementById('vid-modal');
@@ -183,9 +175,6 @@ function initVideoModal() {
 
 /* ══════════════════════════════════════════════
    10. CERTIFICATE LIGHTBOX
-   ─────────────────────────────────────────────
-   Usage in HTML:
-   onclick="openLightbox('assets/cert-name.jpg')"
 ══════════════════════════════════════════════ */
 function initCertLightbox() {
     const lb    = document.getElementById('lightbox');
@@ -198,10 +187,6 @@ function initCertLightbox() {
 
 /* ══════════════════════════════════════════════
    11. CONTACT FORM
-   ─────────────────────────────────────────────
-   TODO: Replace alert() with Formspree or EmailJS for real sending.
-   Formspree setup: https://formspree.io → get your form ID
-   Then change to: fetch('https://formspree.io/f/YOUR_ID', {method:'POST',body:new FormData(e.target)})
 ══════════════════════════════════════════════ */
 function initContactForm() {
     const form = document.getElementById('cform');
