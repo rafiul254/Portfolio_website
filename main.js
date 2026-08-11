@@ -189,12 +189,14 @@ function initCertLightbox() {
    11. CONTACT FORM
 ══════════════════════════════════════════════ */
 function initContactForm() {
+    // Form submits to formsubmit.co (see HTML action attribute)
+    // JS handler removed — real email delivery now active
     const form = document.getElementById('cform');
     if (!form) return;
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        alert('Message sent! Thank you 🚀');
-        form.reset();
+    // Show a loading state while form submits
+    form.addEventListener('submit', () => {
+        const btn = form.querySelector('button[type="submit"], .btn');
+        if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
     });
 }
 
