@@ -85,7 +85,7 @@ nav { z-index:100; }
 }
 .nav-link:hover::after, .nav-link.active::after { width:100%; }
 .nav-link:hover, .nav-link.active { color:var(--accent-l); }
-#ham { display:none; background:none; border:none; color:var(--text); font-size:1.3rem; cursor:pointer; }
+#ham { display:none; background:none; border:none; color:var(--text); font-size:1.3rem; cursor:pointer; padding:8px 10px; border-radius:6px; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
 #mobile-nav {
     display:none; flex-direction:column; gap:18px;
     position:fixed; top:64px; left:0; width:100%;
@@ -612,5 +612,31 @@ footer span { color:var(--accent-l); }
     footer { padding:24px 32px; }
 }
 @media(max-width:580px){
+    /* Layout */
     .skills-grid, .cert-grid, .proj-grid, .exp-grid { grid-template-columns:1fr; }
+    section { padding:60px 18px; }
+    #hero { padding:80px 18px 50px; }
+
+    /* ── Font size floor: nothing below 12px (0.75rem) on mobile ── */
+    body { font-size:15px; }
+    .section-eye, .proj-tag, .skill-tag, .cert-title,
+    .cert-meta, .exp-role-meta, .exp-sub, .stat-label,
+    .about-tag, .footer-copy, .footer-links a,
+    .timeline-date, .exp-bullet, .skill-name { font-size:0.78rem; }
+    .proj-desc, .exp-desc, .about-bio, .contact-info-text { font-size:0.88rem; line-height:1.75; }
+    .proj-title, .cert-name, .exp-role { font-size:0.95rem; }
+    .nav-link { font-size:0.82rem; }
+
+    /* ── Touch targets: minimum 44px tap area ── */
+    #ham { padding:10px 12px; font-size:1.4rem; }
+    .btn, .cta-btn { padding:14px 22px; font-size:0.88rem; min-height:44px; }
+    .hero-social-link { padding:10px; min-width:44px; min-height:44px;
+        display:inline-flex; align-items:center; justify-content:center; }
+    .proj-link, .proj-gh { min-height:40px; padding:10px 16px; font-size:0.8rem; }
+    .mobile-nav a { padding:14px 20px; font-size:1rem; min-height:44px;
+        display:flex; align-items:center; }
+
+    /* ── Cards: more breathing room ── */
+    .proj-card, .cert-card, .skill-card { padding:16px; }
+    .proj-img-wrap { height:160px; }
 }
